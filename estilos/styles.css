@@ -1,0 +1,143 @@
+/* Estilos mínimos esenciales */
+body {
+    font-family: Calibri, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.4;
+}
+
+header {
+    background: #1a1a2e;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+nav a {
+    color: white;
+    margin-right: 10px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Imagen del grupo centrada y máx. 400px */
+#grupo img {
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Tabla con filas alternadas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background: #1a1a2e;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Formulario con inputs mejorados */
+form {
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* Botón con efecto hover */
+button {
+    background: #0066cc;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #0055aa;
+}
+
+/* Estilos para radio buttons (métodos de pago) */
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* Contenedor para métodos de pago */
+div:has(input[type="radio"]) {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+div:has(input[type="radio"]) label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+div:has(input[type="radio"]) img {
+    height: 30px;
+    margin-top: 5px;
+    transition: transform 0.2s;
+}
+
+div:has(input[type="radio"]) img:hover {
+    transform: scale(1.1);
+}
+
+#resumenCompra {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+#resumenCompra p {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    background: #1a1a2e;
+    color: white;
+    padding: 10px;
+}
