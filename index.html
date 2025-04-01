@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Indomables - Conciertos 2021</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Los Indomables</h1>
+        <nav>
+            <a href="#grupo">El Grupo</a>
+            <a href="#conciertos">Conciertos</a>
+            <a href="#entradas">Comprar</a>
+        </nav>
+    </header>
+
+    <section id="grupo">
+        <h2>Sobre el Grupo</h2>
+        <img src="img/grupo.jpeg" alt="Foto de Los Indomables">
+        <p>Los Indomables es una banda de rock alternatido formada en 2007. Con 8 álbumes de estudio y miles de seguidores en todo el país, se ha consolidado como uno de los grupos más cañeros e importantes del panorama musical nacional.</p>
+    </section>
+
+    <section id="conciertos">
+        <h2>Próximos Conciertos</h2>
+        <table>
+            <tr>
+                <th>Ciudad</th><th>Fecha</th><th>Lugar</th><th>Hora</th><th>Precio</th>
+            </tr>
+            <tr>
+                <td>Madrid</td><td>12 de Mayo, 2021</td><td>Teatro Manitoba</td><td>21:00</td><td>Desde 40€</td>
+            </tr>
+            <tr>
+                <td>Barcelona</td><td>15 de Abril, 2021</td><td>Palacio de Oro</td><td>21:30</td><td>Desde 55€</td>
+            </tr>
+            <tr>
+                <td>Bilbao</td><td>17 de Junio, 2021</td><td>Espacio de Juego</td><td>20:00</td><td>Desde 35€</td>
+            </tr>
+            <tr>
+                <td>Vitoria</td><td>29 de Junio, 2021</td><td>Jimmy Jaz</td><td>20:30</td><td>Desde 30€</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="entradas">
+        <h2>Comprar Entradas</h2>
+        <form id="compraForm" action="confirmacion.html" method="get">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            
+            <label for="ciudad">Concierto:</label>
+            <select id="ciudad" name="ciudad" required>
+                <option value="">Selecciona una ciudad</option>
+                <option value="Madrid">Madrid - 12 May</option>
+                <option value="Barcelona">Barcelona - 15 Abr</option>
+                <option value="Bilbao">Bilbao - 17 Jun</option>
+                <option value="Vitoria">Vitoria - 29 Jun</option>
+            </select>
+            
+            <label for="entradas">Número de entradas:</label>
+            <input type="number" id="entradas" name="entradas" min="1" max="5" required>
+            
+            <label for="tipoEntrada">Tipo de entrada:</label>
+            <select id="tipoEntrada" name="tipoEntrada" required>
+                <option value="general">General - 40€</option>
+                <option value="vip">VIP - 80€</option>
+                <option value="platinum">Platinum - 120€</option>
+            </select>
+            
+            <p>Método de pago:</p>
+            <div>
+                <label>
+                    <input type="radio" name="metodoPago" value="visa" required>
+                    <img src="img/visa.png" alt="Visa">
+                </label>
+                <label>
+                    <input type="radio" name="metodoPago" value="mastercard">
+                    <img src="img/master.png" alt="MasterCard">
+                </label>
+                <label>
+                    <input type="radio" name="metodoPago" value="paypal">
+                    <img src="img/paypal.png" alt="PayPal">
+                </label>
+                <label>
+                    <input type="radio" name="metodoPago" value="bizum">
+                    <img src="img/bizum.jpg" alt="Bizum">
+                </label>
+            </div>
+            
+            <label>
+                <input type="checkbox" id="terminos" name="terminos" required>
+                Acepto los términos
+            </label>
+            
+            <button type="submit">Confirmar Compra</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2021 Los Indomables</p>
+    </footer>
+
+    <script src="funciones/script.js"></script>
+</body>
+</html>
